@@ -1,0 +1,723 @@
+/* Reset some default styles */
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+body {
+    padding-top: 80px;
+}
+
+.product-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling for the container */
+}
+
+.product {
+	display: none;
+    flex: 0 0 auto; /* Allow products to have a fixed width */
+    width: 300px; /* Adjust the width of each product as needed */
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.add-to-cart {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
+}
+/* ... (your CSS styles remain the same) ... */
+
+/* Product slider container styles */
+/* Product slider container styles */
+.product-slider {
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px; /* Add spacing between the product section and slider */
+    white-space: nowrap; /* Prevents products from wrapping to the next line */
+}
+
+/* Individual product container styles */
+.product-slider .product {
+    display: inline-block; /* Display products side by side */
+    width: 300px; /* Adjust the width as needed */
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    margin-right: 20px; /* Add spacing between products */
+}
+
+/* Navigation button styles */
+.slide-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Position the previous and next buttons */
+.slide-button.prev {
+    left: 0;
+}
+
+.slide-button.next {
+    right: 0;
+}
+
+/* ... (your existing CSS styles) ... */
+
+/* Home Slide Section Styles */
+.home-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 40px 0;
+}
+
+/* First Division Styles (Horizontal Split) */
+.slide-division {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.slide-division img {
+    max-width: 50%;
+}
+
+/* Lower Division Styles (Divided into 3) */
+.lower-slide-division {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.lower-slide-subdivision {
+    flex: 0 0 calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.lower-slide-subdivision img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+/* 
+---------------------------------------------
+banner
+--------------------------------------------- 
+*/
+
+.main-banner {
+  border-bottom: 3px dotted #eee;
+  padding-top: 160px;
+  padding-bottom: 30px;
+}
+
+.main-banner .left-content .thumb img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.main-banner .left-content .inner-content {
+  position: absolute;
+  left: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-banner .left-content .inner-content h4 {
+  color: #fff;
+  margin-top: -10px;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.main-banner .left-content .inner-content span {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  font-style: italic;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.main-banner .right-content .right-first-image {
+  margin-bottom: 28.5px;
+}
+
+.main-banner .right-content .right-first-image .thumb {
+  position: relative;
+  text-align: center;
+}
+
+.main-banner .right-content .right-first-image .thumb img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.main-banner .right-content .right-first-image .thumb .inner-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.main-banner .right-content .right-first-image .thumb .inner-content h4 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.main-banner .right-content .right-first-image .thumb .inner-content span {
+  font-size: 16px;
+  color: #fff;
+  font-style: italic;
+}
+
+.main-banner .right-content .right-first-image .thumb .hover-content {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  left: 15px;
+  bottom: 15px;
+  text-align: center;
+  background-color: rgba(42,42,42,.97);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.main-banner .right-content .right-first-image .thumb:hover .hover-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-banner .right-content .right-first-image .thumb .hover-content .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.main-banner .right-content .right-first-image .thumb .hover-content h4 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.main-banner .right-content .right-first-image .thumb .hover-content p {
+  color: #fff;
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+
+/*
+---------------------------------------------
+Explore
+---------------------------------------------
+*/
+
+#explore {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  border-bottom: 3px dotted #eee;
+}
+
+#explore .left-content {
+  margin-right: 30px;
+}
+
+#explore .left-content h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+
+#explore .left-content span {
+  font-size: 14px;
+  color: #aaaaaa;
+  font-weight: 500;
+  display: block;
+  margin-top: 25px;
+}
+
+#explore .left-content .quote {
+  margin-top: 25px;
+}
+
+#explore .left-content .quote i {
+  float: left;
+  font-size: 32px;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+#explore .left-content .quote p {
+  font-style: italic;
+  color: #2a2a2a;
+  font-weight: 500;
+}
+
+#explore .left-content p {
+  font-size: 14px;
+  color: #aaaaaa;
+  font-weight: 500;
+  display: block;
+  margin-top: 25px;
+}
+
+#explore .left-content .main-border-button a {
+  color: #2a2a2a;
+  border-color: #2a2a2a;
+  margin-top: 35px;
+}
+
+#explore .left-content .main-border-button a:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+#explore img {
+  width: 100%;
+  overflow: hidden;
+}
+
+#explore .leather {
+  margin-bottom: 30px;
+}
+
+#explore .first-image {
+  margin-bottom: 30px;
+}
+
+#explore .leather,
+#explore .types {
+  min-height: 255px;
+  background-color: #f8f8f8;
+  text-align: center;
+  width: 100%;
+}
+
+#explore .leather h4,
+#explore .types h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2a2a2a;
+  padding-top: 90px;
+  margin-bottom: 5px;
+}
+
+#explore .leather span,
+#explore .types span {
+  font-size: 14px;
+  font-style: italic;
+  color: #aaa;
+  font-weight: 500;
+}
+
+/* 
+---------------------------------------------
+Products Page
+--------------------------------------------- 
+*/
+
+.page-heading {
+  margin-top: 160px;
+  margin-bottom: 30px;
+  background-image: url(../images/products-page-heading.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page-heading .inner-content {
+  padding: 150px 0px;
+  text-align: center;
+}
+
+.page-heading .inner-content h2 {
+  font-size: 52px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.page-heading .inner-content span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  font-style: italic;
+}
+
+#products .section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 80px;
+}
+
+#products .item {
+  margin-bottom: 30px;
+}
+
+#products .item .thumb img {
+  width: 100%;
+  overflow: hidden;
+}
+
+#products .item .down-content {
+  padding-top: 20px;
+  position: relative;
+  z-index: 3;
+  background-color: #fff;
+}
+
+#products .item .down-content h4 {
+  font-size: 22px;
+  color: #2a2a2a;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+#products .item .down-content span {
+  font-size: 18px;
+  color: #a1a1a1;
+  font-weight: 500;
+  display: block;
+}
+
+#products .item .down-content ul.stars {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+#products .item .down-content ul.stars li {
+  display: inline;
+  font-size: 13px;
+}
+
+#products .item .thumb .hover-content {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  bottom: -60px;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+}
+
+#products .item .thumb:hover .hover-content {
+  bottom: 30px;
+  opacity: 1;
+  visibility: visible;
+}
+
+#products .item .thumb {
+  position: relative;
+}
+
+#products .item .thumb .hover-content ul li {
+  display: inline;
+  margin: 0px 10px;
+}
+
+#products .item .thumb .hover-content ul li a {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  color: #2a2a2a;
+  background-color: #fff;
+}
+
+#products .pagination {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+#products .pagination ul {
+  text-align: center;
+  width: 100%;
+}
+
+#products .pagination ul li {
+  display: inline;
+  margin: 0px 5px;
+}
+
+#products .pagination ul li a {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #2a2a2a;
+  display: inline-block;
+  text-align: center;
+  line-height: 44px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2a2a2a;
+}
+
+#products .pagination ul li a:hover,
+#products .pagination ul li.active a {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+/* ... (your existing CSS styles) ... */
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+.search-button:hover {
+    background-color: #555;
+}
+/* Basic styling for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+		/* Add some basic styling for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+		
+		 /* login style */
+		 /* Basic styling for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+		
+		/* Profile style */
+/* Profile icon with image and name */
+.profile-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.profile-icon img {
+    width: 30px; /* Adjust the size of the profile image */
+    height: 30px; /* Adjust the size of the profile image */
+    border-radius: 50%;
+    margin-right: 10px; /* Add spacing between image and name */
+}
