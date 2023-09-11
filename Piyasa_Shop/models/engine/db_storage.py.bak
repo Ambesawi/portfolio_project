@@ -4,6 +4,7 @@ Contains the class DBStorage
 """
 
 import models
+
 from models.user import user
 from os import getenv
 import sqlalchemy
