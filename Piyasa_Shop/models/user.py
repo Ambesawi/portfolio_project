@@ -19,8 +19,8 @@ class User(BaseModel, Base):
         LastName = Column(CHAR(20), nullable=False)
         Email = Column(VARCHAR(45), nullable=False)
         Password = Column(VARCHAR(45), nullable=False)
-	    Address = Column(VARCHAR(45), nullable=False)
-	    PhoneNumber = Column(INT(45), nullable=False)
+	Address = Column(VARCHAR(45), nullable=False)
+	PhoneNumber = Column(INT(45), nullable=False)
         orders = relationship("Order", backref="user")
     else:
         Email = ""
