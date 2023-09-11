@@ -23,10 +23,10 @@ class User(BaseModel, Base):
 	    PhoneNumber = Column(INT(45), nullable=False)
         orders = relationship("Order", backref="user")
     else:
-        Email = ""
-        Password = ""
-        FirstName = ""
-        LastName = ""
+        email = ""
+        password = ""
+        first_name = ""
+        last_name = ""
 
     def __init__(self, *args, **kwargs):
         """initializes user"""
@@ -34,6 +34,6 @@ class User(BaseModel, Base):
 
     def __setattr__(self, name, value):
         """sets a password with md5 encryption"""
-        if name == "Password":
+        if name == "password":
             value = md5(value.encode()).hexdigest()
         super().__setattr__(name, value)
