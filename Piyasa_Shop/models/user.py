@@ -1,3 +1,12 @@
+#!/usr/bin/python3
+""" holds class User"""
+
+import models
+from os import getenv
+import sqlalchemy
+from sqlalchemy import Column, String
+from sqlalchemy.orm import relationship
+from hashlib import md5
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
