@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ holds class User"""
 
-import models
 from os import getenv
 import sqlalchemy
 from sqlalchemy import Column, String
@@ -22,9 +21,9 @@ db_config = {
     "database": "piyasa_dev_db",  # Your database name
 }
 
-# Configure the database connection
-app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql://{db_config['user']}:{db_config['password']}@{db_config['host']}/{db_config['database']}"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# Configure the database URL
+app.config['SQLALCHEMY_DATABASE_URI'] ='mysql://piyasa_dev:piyasa_dev_pwd@localhost/piyasa_dev_db'
+
 
 # Create the database object
 db = SQLAlchemy(app)
@@ -35,12 +34,12 @@ class User(db.Model):
     FirstName = db.Column(db.String(20), nullable=False)
     LastName = db.Column(db.String(20), nullable=False)
     Email = db.Column(db.String(45), unique=True, nullable=False)
-    Password = db.Column(db.String(45), nullable=False)
+    Password = db.Column(db.String(128), nullable=False)
     Address = db.Column(db.String(45), nullable=False)
     PhoneNumber = db.Column(db.Integer, nullable=False)
 
 # Handle registration form submission and insert data into the database
-@app.route('/register', methods=['POST'])
+@app.route('/index.html', methods=['POST'])
 def register():
     if request.method == 'POST':
         first_name = request.form['firstName']
@@ -54,19 +53,22 @@ def register():
         if User.query.filter_by(Email=email).first():
             flash('Email already registered!', 'error')
         else:
-            # Hash the password before storing it in the database
-            hashed_password = generate_password_hash(password, method='sha256')
-            
-            # Create a new user instance and add it to the database
-            new_user = User(FirstName=first_name, LastName=last_name, Email=email, Password=hashed_password, Address=address, PhoneNumber=phone_number)
+             # Create a new user and add it to the database
+            new_user = User(
+                FirstName=first_name,
+                LastName=last_name,
+                Email=email,
+                Password=generate_password_hash(password),  # Hash the password
+                Address="",  # You can set this value as needed
+                PhoneNumber=phone_number
+            )
             db.session.add(new_user)
             db.session.commit()
-            flash('Registration successful!', 'success')
-    
-    return redirect(url_for('index'))
+            return 'Registration successful!'
+        return render_template('index.html')
 
 # Handle login form submission and check user credentials in the database
-@app.route('/login', methods=['POST'])
+@app.route('/profile.html', methods=['POST'])
 def login():
     if request.method == 'POST':
         username = request.form['username']
@@ -96,3 +98,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
