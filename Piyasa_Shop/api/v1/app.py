@@ -5,8 +5,19 @@ from werkzeug.security import generate_password_hash, check_password_hash
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
+# Define your MySQL database connection parameters
+db_config = {
+    "host": "localhost",
+    "user": "your_username",
+    "password": "your_password",
+    "database": "piyasa_dev_db",  # Your database name
+}
+
 # Configure the database connection
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@localhost/piyasa_dev_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql://{db_config['user']}:{db_config['password']}@{db_config['host']}/{db_config['database']}"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Create the database object
 db = SQLAlchemy(app)
 
 # Define a User model for the database
